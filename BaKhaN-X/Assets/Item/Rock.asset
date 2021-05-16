@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd6ec85f11d0d0243b022df993169942, type: 3}
-  m_Name: New Item
+  m_Name: Rock
   m_EditorClassIdentifier: 
-  itemName: 
-  itemImage: {fileID: 0}
-  itemPrefab: {fileID: 0}
+  itemName: Rock
+  itemImage: {fileID: 21300000, guid: f96417aabb8b7554a8e22242b53ec578, type: 3}
+  itemType: 2
+  itemPrefab: {fileID: 2231965698993440213, guid: 0a66d1c5427c69a46a0e4000f926aaab, type: 3}
   weaponType: 

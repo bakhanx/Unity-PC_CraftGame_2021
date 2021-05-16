@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rock
   - NPC
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Weapon
-  - 
-  - 
+  - Player
+  - Item
   - 
   - 
   - 
