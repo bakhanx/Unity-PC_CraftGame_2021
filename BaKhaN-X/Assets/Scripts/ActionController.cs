@@ -15,7 +15,7 @@ public class ActionController : MonoBehaviour
 
     //component
     [SerializeField] private Text actionText;
-
+    [SerializeField] private Inventory theInventory;
 
 
 
@@ -42,6 +42,7 @@ public class ActionController : MonoBehaviour
             if (hitInfo.transform != null)
             {
                 Debug.Log(hitInfo.transform.name);
+                theInventory.AcquireItem(hitInfo.transform.GetComponent<ItemPickup>().item);
                 Destroy(hitInfo.transform.gameObject);
                 ItemInfoDisappear();
             }
