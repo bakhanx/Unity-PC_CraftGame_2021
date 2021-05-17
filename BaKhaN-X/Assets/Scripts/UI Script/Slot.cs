@@ -63,6 +63,4 @@ public class Slot : MonoBehaviour
         go_CountImage.SetActive(false);
         text_Count.text = "0";
     }
-
-
 }
