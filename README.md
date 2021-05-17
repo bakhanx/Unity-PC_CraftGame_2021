@@ -12,45 +12,74 @@
 
 - Player Controller
 
-* Walk
-* Run
-* Crouch
-* Jump
-* Camera Rotation
-* Character Rotation
+  - Walk
+  - Run
+  - Crouch
+  - Jump
+  - Camera Rotation
+  - Character Rotation
 
-## Gun Controller
+- Action Controller
 
-- Fire
-- Reload
-- FineSightMode
-- GunChange
+  - Pick Up
+  - Check Item
+  - Item Info Appear
 
-## Hand Controller
+- Gun Controller
 
-- Swing
+  - Fire
+  - Reload
+  - FineSightMode
+  - GunChange
 
-## Axe Controller
+- Hand Controller
 
-- Swing
-- Mining
+  - Swing
 
-## ~~PickAxe Controller (미구현)~~
+- Axe Controller
+
+  - Swing
+  - Mining
+
+- ~~PickAxe Controller (미구현)~~
 
 <br>
 
-## Close Weapon Controller (근접무기 상속)
+- Close Weapon Controller (근접무기 상속)
 
-- Hand Controller
-- Axe Controller
-- ~~PickAxe (미구현)~~
+  - Hand Controller
+  - Axe Controller
+  - ~~PickAxe (미구현)~~
 
 ## Weapon Manager
 
+- Change Weapon
+- Weapon[] Controller
+
 ## AI (NPC)
+
+- View Angle
+- Animal
+  - Move
+  - Rotation
+  - Reset
+  - Random Action
+    - Wait
+    - Eat
+    - Peek
+    - Walk
+  - Interaction
+    - Run
+    - Damage
+    - Dead
+  - Random Sound
 
 ## UI
 
 - Inventory
 - Slot
 - StatusController
+  - HP
+  - SP
+  - Hungry
+  - Thirsty
