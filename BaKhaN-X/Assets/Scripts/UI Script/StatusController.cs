@@ -117,8 +117,6 @@ public class StatusController : MonoBehaviour
                 currentHungryDecreaseTime = 0;
             }
         }
-        else
-            Debug.Log("Hungry : 0");
     }
 
     private void Thirsty()
@@ -133,9 +131,6 @@ public class StatusController : MonoBehaviour
                 currentThirstyDecreaseTime = 0;
             }
         }
-        else
-            Debug.Log("Thirsty : 0");
-
     }
 
     private void GagueUpdate()
@@ -201,7 +196,6 @@ public class StatusController : MonoBehaviour
         else
         {
             currentHungry -= _count;
-            Debug.Log("Hungry : 0");
         }
     }
 
@@ -221,7 +215,6 @@ public class StatusController : MonoBehaviour
         else
         {
             currentThirsty -= _count;
-            Debug.Log("Thirsty : 0");
         }
     }
 

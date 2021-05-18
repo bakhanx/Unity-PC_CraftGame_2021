@@ -131,19 +131,16 @@ public class Pig : MonoBehaviour
     private void Wait()
     {
         currentTime = waitTime;
-        Debug.Log("wait");
     }
     private void Eat()
     {
         currentTime = waitTime;
         anim.SetTrigger("Eat");
-        Debug.Log("eat");
     }
     private void Peek()
     {
         currentTime = waitTime;
         anim.SetTrigger("Peek");
-        Debug.Log("peek");
     }
     private void TryWalk()
     {
@@ -151,7 +148,6 @@ public class Pig : MonoBehaviour
         currentTime = walkTime;
         anim.SetBool("Walking", isWalking);
         applySpeed = walkSpeed;
-        Debug.Log("walk");
     }
 
 

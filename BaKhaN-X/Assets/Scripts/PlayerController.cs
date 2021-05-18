@@ -82,9 +82,12 @@ public class PlayerController : MonoBehaviour
         TryRun();
         TryCrouch();
         Move();
+        if (!Inventory.inventoryActivated)
+        {
+            CameraRotation();
+            CharacterRotation();
+        }
 
-        CameraRotation();
-        CharacterRotation();
     }
     // regular frame & good at physics engine ( ex.rigidbody, distance)
     private void FixedUpdate()

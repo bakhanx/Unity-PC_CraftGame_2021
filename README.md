@@ -78,8 +78,10 @@
 
 - Inventory
 - Slot
-- StatusController
+- Status Controller
   - HP
+  - DP
   - SP
   - Hungry
   - Thirsty
+  - Satisfy
