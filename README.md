@@ -59,6 +59,7 @@
 ## AI (NPC)
 - View Angle
 - Animal
+  - Common 
     - Move
     - Rotation
     - Reset
