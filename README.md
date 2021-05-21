@@ -69,7 +69,9 @@
       - Damage
       - Dead
   - Strong
+    ~~- Tiger 
   - Weak
+    - Common 
       - Run (Hurt, in ViewAngle)
     - Pig 
       - Wait
