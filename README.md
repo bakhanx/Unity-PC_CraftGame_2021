@@ -69,7 +69,7 @@
       - Damage
       - Dead
   - Strong
-    ~~- Tiger 
+    ~~ - Tiger (미구현)~~
   - Weak
     - Common 
       - Run (Hurt, in ViewAngle)
