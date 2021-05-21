@@ -57,23 +57,25 @@
 - Weapon[] Controller
 
 ## AI (NPC)
-
 - View Angle
 - Animal
-  - Move
-  - Rotation
-  - Reset
-  - Random Action
-    - Wait
-    - Eat
-    - Peek
-    - Walk
-  - Interaction
-    - Run
-    - Damage
-    - Dead
-  - Random Sound
-
+    - Move
+    - Rotation
+    - Reset
+    - Random Action
+    - Random Sound
+    - Interaction
+      - Damage
+      - Dead
+  - Strong
+  - Weak
+      - Run (Hurt, in ViewAngle)
+    - Pig 
+      - Wait
+      - Eat
+      - Peek
+      - Walk
+   
 ## UI
 
 - Inventory
