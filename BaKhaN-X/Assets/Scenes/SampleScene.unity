@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15121,7 +15121,7 @@ GameObject:
   - component: {fileID: 1830005934}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: NPC
+  m_TagString: WeakAnimal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15142,18 +15142,19 @@ MonoBehaviour:
   hp: 3
   walkSpeed: 1
   runSpeed: 3
+  turningSpeed: 0.5
   walkTime: 5
   waitTime: 4
   runTime: 3
   anim: {fileID: 1849157620}
   rigid: {fileID: 1830005932}
   boxCol: {fileID: 1830005931}
-  sound_pig_Normal:
+  sound_Normal:
   - {fileID: 8300000, guid: 08237bd0386628540b8c077e5ebc320b, type: 3}
   - {fileID: 8300000, guid: cd40bf1eb8d86b942b2c9957c584187e, type: 3}
   - {fileID: 8300000, guid: 025a5fda18845d948a8d7ccefe33e9ec, type: 3}
-  sound_pig_Hurt: {fileID: 8300000, guid: 20d80c7a994a60a41a45c573f0839ab3, type: 3}
-  sound_pig_Dead: {fileID: 8300000, guid: d8f9c4f7a577d9247975d1dc9c95d4e7, type: 3}
+  sound_Hurt: {fileID: 8300000, guid: 20d80c7a994a60a41a45c573f0839ab3, type: 3}
+  sound_Dead: {fileID: 8300000, guid: d8f9c4f7a577d9247975d1dc9c95d4e7, type: 3}
 --- !u!65 &1830005931
 BoxCollider:
   m_ObjectHideFlags: 0

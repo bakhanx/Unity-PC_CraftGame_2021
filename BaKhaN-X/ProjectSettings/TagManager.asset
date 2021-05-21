@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Rock
-  - NPC
   - Item
+  - WeakAnimal
+  - StrongAnimal
   layers:
   - Default
   - TransparentFX
