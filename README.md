@@ -57,23 +57,28 @@
 - Weapon[] Controller
 
 ## AI (NPC)
-
 - View Angle
 - Animal
-  - Move
-  - Rotation
-  - Reset
-  - Random Action
-    - Wait
-    - Eat
-    - Peek
-    - Walk
-  - Interaction
-    - Run
-    - Damage
-    - Dead
-  - Random Sound
-
+  - Common 
+    - Move
+    - Rotation
+    - Reset
+    - Random Action
+    - Random Sound
+    - Interaction
+      - Damage
+      - Dead
+  - Strong
+    - ~~Tiger (미구현)~~
+  - Weak
+    - Common 
+      - Run (Hurt, in ViewAngle)
+    - Pig 
+      - Wait
+      - Eat
+      - Peek
+      - Walk
+   
 ## UI
 
 - Inventory
