@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Animal : MonoBehaviour
 {
@@ -9,10 +10,8 @@ public class Animal : MonoBehaviour
     [SerializeField] protected int hp;
     [SerializeField] protected float walkSpeed;
     [SerializeField] protected float runSpeed;
-    [SerializeField] protected float turningSpeed;
 
-    protected float applySpeed;
-    protected Vector3 direction;
+    protected Vector3 destination;
 
     //State Var
     protected bool isAction;
@@ -32,12 +31,15 @@ public class Animal : MonoBehaviour
     [SerializeField] protected BoxCollider boxCol;
 
     protected AudioSource theAudio;
+    protected NavMeshAgent nav;
+
     [SerializeField] protected AudioClip[] sound_Normal;
     [SerializeField] protected AudioClip sound_Hurt;
     [SerializeField] protected AudioClip sound_Dead;
     // Start is called before the first frame update
     void Start()
     {
+        nav = GetComponent<NavMeshAgent>();
         theAudio = GetComponent<AudioSource>();
         currentTime = waitTime;
         isAction = true;
@@ -50,7 +52,6 @@ public class Animal : MonoBehaviour
         if (!isDead)
         {
             Move();
-            Rotation();
             ElapseTime();
         }
     }
@@ -58,17 +59,10 @@ public class Animal : MonoBehaviour
     protected void Move()
     {
         if (isWalking || isRunning)
-            rigid.MovePosition(transform.position + (transform.forward * applySpeed * Time.deltaTime));
+            // rigid.MovePosition(transform.position + (transform.forward * applySpeed * Time.deltaTime));
+            nav.SetDestination(transform.position + destination * 5f);
     }
 
-    protected void Rotation()
-    {
-        if (isWalking || isRunning)
-        {
-            Vector3 _rotation = Vector3.Lerp(transform.eulerAngles, new Vector3(0f, direction.y, 0f), turningSpeed);
-            rigid.MoveRotation(Quaternion.Euler(_rotation));
-        }
-    }
 
     protected void ElapseTime()
     {
@@ -86,11 +80,12 @@ public class Animal : MonoBehaviour
         isRunning = false;
         isAction = true;
 
-        applySpeed = walkSpeed;
+        nav.speed = walkSpeed;
+        nav.ResetPath();
         anim.SetBool("Walking", isWalking);
         anim.SetBool("Running", isRunning);
 
-        direction.Set(0f, Random.Range(0f, 360f), 0f);
+        destination.Set(Random.Range(-0.2f, 0.2f), 0f, Random.Range(0.5f, 1f));
     }
 
 
@@ -100,7 +95,7 @@ public class Animal : MonoBehaviour
         isWalking = true;
         currentTime = walkTime;
         anim.SetBool("Walking", isWalking);
-        applySpeed = walkSpeed;
+        nav.speed = walkSpeed;
     }
 
     public virtual void Damage(int _dmg, Vector3 _targetPos)
