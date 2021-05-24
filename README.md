@@ -78,11 +78,16 @@
       - Eat
       - Peek
       - Walk
-   
+
+## Item
+- Gun
+- Potion
+
 ## UI
 
 - Inventory
 - Slot
+  - Drag Slot
 - Status Controller
   - HP
   - DP
