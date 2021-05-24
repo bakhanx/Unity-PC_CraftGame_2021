@@ -10,6 +10,8 @@ public class Item : ScriptableObject // not need attach script at a object
     public ItemType itemType;
     public GameObject itemPrefab; // prefab of item
 
+    [TextArea] public string itemDesc; // description of item
+
     public string weaponType; // type of weapon
 
     public enum ItemType

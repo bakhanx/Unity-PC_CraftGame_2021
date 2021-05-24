@@ -16,4 +16,7 @@ MonoBehaviour:
   itemImage: {fileID: 21300000, guid: bb8eb4d96255d614b98a9e3a23ca3c86, type: 3}
   itemType: 0
   itemPrefab: {fileID: 1802175715317318951, guid: 15eb62c53f3c9974f8cc318f00a038e6, type: 3}
+  itemDesc: 'Normal Gun
+
+    Sub Machine Gun'
   weaponType: GUN

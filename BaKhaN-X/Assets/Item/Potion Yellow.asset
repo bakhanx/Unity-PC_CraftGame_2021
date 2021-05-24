@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd6ec85f11d0d0243b022df993169942, type: 3}
-  m_Name: Rock
+  m_Name: Potion Yellow
   m_EditorClassIdentifier: 
-  itemName: Rock
-  itemImage: {fileID: 21300000, guid: f96417aabb8b7554a8e22242b53ec578, type: 3}
-  itemType: 2
-  itemPrefab: {fileID: 517206572111624925, guid: 7c7d8518aa36bd6478e15762b2a49619, type: 3}
-  itemDesc: Rock peice
+  itemName: Potion Yellow
+  itemImage: {fileID: 21300000, guid: f605ea254d28911408a10149a38bb1f7, type: 3}
+  itemType: 1
+  itemPrefab: {fileID: 8416195764891670748, guid: 8b951b5c873431647a0c6b044fa9ca52, type: 3}
+  itemDesc: 
   weaponType: 
