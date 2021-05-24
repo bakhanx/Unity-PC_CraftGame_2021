@@ -15,5 +15,6 @@ MonoBehaviour:
   itemName: Rock
   itemImage: {fileID: 21300000, guid: f96417aabb8b7554a8e22242b53ec578, type: 3}
   itemType: 2
-  itemPrefab: {fileID: 2231965698993440213, guid: 0a66d1c5427c69a46a0e4000f926aaab, type: 3}
+  itemPrefab: {fileID: 517206572111624925, guid: 7c7d8518aa36bd6478e15762b2a49619, type: 3}
+  itemDesc: Rock peice
   weaponType: 

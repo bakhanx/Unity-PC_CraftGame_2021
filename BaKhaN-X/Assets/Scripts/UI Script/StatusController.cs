@@ -151,11 +151,11 @@ public class StatusController : MonoBehaviour
             currentHp = hp;
     }
 
-    public void DecreaseHp(int _count)
+    public void DecreaseHP(int _count)
     {
         if (currentDp > 0)
         {
-            DecreaseDp(_count);
+            DecreaseDP(_count);
             return;
         }
         currentHp -= _count;
@@ -164,7 +164,7 @@ public class StatusController : MonoBehaviour
             Debug.Log("HP : 0");
     }
 
-    public void IncreaseDp(int _count)
+    public void IncreaseDP(int _count)
     {
         if (currentDp + _count < dp)
             currentDp += _count;
@@ -172,7 +172,7 @@ public class StatusController : MonoBehaviour
             currentDp = dp;
     }
 
-    public void DecreaseDp(int _count)
+    public void DecreaseDP(int _count)
     {
         currentDp -= _count;
 

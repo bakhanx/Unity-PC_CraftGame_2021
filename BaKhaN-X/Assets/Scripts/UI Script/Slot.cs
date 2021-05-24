@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+
 {
     public Item item;
     public int itemCount;
@@ -15,12 +16,13 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
     [SerializeField] private Text text_Count;
     [SerializeField] private GameObject go_CountImage;
 
-    private WeaponManager theWeaponManager;
+    private SlotToolTip theSlot;
+    private ItemEffectDatabase theItemEffectDatabase;
 
     void Start()
     {
         //to find it on hierachy
-        theWeaponManager = FindObjectOfType<WeaponManager>();
+        theItemEffectDatabase = FindObjectOfType<ItemEffectDatabase>();
     }
 
     //image alpha
@@ -80,22 +82,14 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
         {
             if (item != null)
             {
-                //Equip
-                if (item.itemType == Item.ItemType.Equipment)
-                {
-                    //ex) "GUN", "Submachinegun"
-                    StartCoroutine(theWeaponManager.ChangeWeaponCoroutine(item.weaponType, item.itemName));
-
-                }
-                //consume
-                else
-                {
-                    Debug.Log("Consumed " + item.itemName);
+                theItemEffectDatabase.UseItem(item);
+                if (item.itemType == Item.ItemType.Used)
                     SetSlotCount(-1);
-                }
             }
+
         }
     }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (item != null)
@@ -148,5 +142,19 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDra
             DragSlot.instance.dragSlot.AddItem(_tempItem, _tempItemCount);
         else
             DragSlot.instance.dragSlot.ClearSlot();
+    }
+
+    // Mouse pointer in slot
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            theItemEffectDatabase.ShowToolTip(item);
+        }
+    }
+    // Mouse pointer out slot
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        theItemEffectDatabase.HideToolTip();
     }
 }
