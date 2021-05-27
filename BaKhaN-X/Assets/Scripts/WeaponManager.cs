@@ -9,43 +9,24 @@ public class WeaponManager : MonoBehaviour
     public static Transform currentWeapon; // current weapon
     public static Animator currentWeaponAnim; // current weapon animation
 
-    [SerializeField]
-    private string currentWeaponType; // current weapon type
-
-
-
-    [SerializeField]
-    private float changeWeaponDelayTime; // change weapon delay
-    [SerializeField]
-    private float changeWeaponEndDelayTime; // change weapon end time
+    [SerializeField] private string currentWeaponType; // current weapon type
+    [SerializeField] private float changeWeaponDelayTime; // change weapon delay
+    [SerializeField] private float changeWeaponEndDelayTime; // change weapon end time
 
     // type of weapon manage
-    [SerializeField]
-    private Gun[] guns;
-    [SerializeField]
-    private CloseWeapon[] hands;
-    [SerializeField]
-    private CloseWeapon[] axes;
-
+    [SerializeField] private Gun[] guns;
+    [SerializeField] private CloseWeapon[] hands;
+    [SerializeField] private CloseWeapon[] axes;
 
     //easily access weapon on manage ,, Dictionry : <key, value>
     private Dictionary<string, Gun> gunDictionary = new Dictionary<string, Gun>();
     private Dictionary<string, CloseWeapon> axeDictionary = new Dictionary<string, CloseWeapon>();
     private Dictionary<string, CloseWeapon> handDictionary = new Dictionary<string, CloseWeapon>();
 
-
     //component
-    [SerializeField]
-    private GunController theGunController;
-    [SerializeField]
-    private AxeController theAxeController;
-    [SerializeField]
-    private HandController theHandController;
-
-
-
-
-
+    [SerializeField] private GunController theGunController;
+    [SerializeField] private AxeController theAxeController;
+    [SerializeField] private HandController theHandController;
 
     // Start is called before the first frame update
     void Start()

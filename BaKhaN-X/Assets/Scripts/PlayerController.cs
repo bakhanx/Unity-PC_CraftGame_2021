@@ -8,17 +8,13 @@ public class PlayerController : MonoBehaviour
     private Gun currentGun;
     private CloseWeapon currentCloseWeapon;
     //Speed Control
-    [SerializeField]
-    private float walkSpeed;
-    [SerializeField]
-    private float runSpeed;
-    [SerializeField]
-    private float crouchSpeed;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float runSpeed;
+    [SerializeField] private float crouchSpeed;
 
     private float applySpeed;
 
-    [SerializeField]
-    private float jumpForce;
+    [SerializeField] private float jumpForce;
 
     //State
     private bool isWalk = false;
@@ -40,8 +36,7 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider capsuleCollider;
 
     //Sensitivity
-    [SerializeField]
-    private float lookSensitivity;
+    [SerializeField] private float lookSensitivity;
 
     //Camera Limit
     [SerializeField]
@@ -49,8 +44,7 @@ public class PlayerController : MonoBehaviour
     private float currentCameraRotationX;
 
     //Component
-    [SerializeField]
-    private Camera theCamera;
+    [SerializeField] private Camera theCamera;
     private Rigidbody myRigid;
     private GunController theGunController;
     private Crosshair theCrosshair;

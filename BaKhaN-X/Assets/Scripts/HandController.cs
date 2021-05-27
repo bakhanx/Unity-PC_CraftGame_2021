@@ -14,8 +14,6 @@ public class HandController : CloseWeaponController
 
     protected override IEnumerator HitCoroutine()
     {
-
-
         while (isSwing)
         {
             if (CheckObject())

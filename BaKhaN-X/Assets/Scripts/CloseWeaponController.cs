@@ -6,8 +6,7 @@ using UnityEngine;
 public abstract class CloseWeaponController : MonoBehaviour
 {
     // current equipped hand type weapon
-    [SerializeField]
-    protected CloseWeapon currentCloseWeapon;
+    [SerializeField] protected CloseWeapon currentCloseWeapon;
 
     // attacking
 
@@ -50,7 +49,6 @@ public abstract class CloseWeaponController : MonoBehaviour
     //abstract coroutine : imcomplete
     protected abstract IEnumerator HitCoroutine();
 
-
     protected private bool CheckObject()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hitInfo, currentCloseWeapon.range))
@@ -61,7 +59,6 @@ public abstract class CloseWeaponController : MonoBehaviour
         {
             return false;
         }
-
     }
 
     //virtual function : complete function but can change function
@@ -76,8 +73,6 @@ public abstract class CloseWeaponController : MonoBehaviour
 
         currentCloseWeapon.transform.localPosition = Vector3.zero;
         currentCloseWeapon.gameObject.SetActive(true);
-
-
     }
 }
 

@@ -11,12 +11,10 @@ public class HUD : MonoBehaviour
     private Gun currentGun;
 
     //HUD on/off
-    [SerializeField]
-    private GameObject go_BulletHUD;
+    [SerializeField] private GameObject go_BulletHUD;
 
     //bullet count text
-    [SerializeField]
-    private Text[] text_bullet;
+    [SerializeField] private Text[] text_bullet;
 
     // Update is called once per frame
     void Update()

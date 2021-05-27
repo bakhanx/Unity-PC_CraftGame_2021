@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Crosshair : MonoBehaviour
 {
-    [SerializeField]
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     private float gunAccuracy; // gun's accuracy by cross hair
 
-    [SerializeField]
-    private GameObject go_crosshairHUD; // parent obejct for crosshair on/off
+    [SerializeField] private GameObject go_crosshairHUD; // parent obejct for crosshair on/off
 
-    [SerializeField]
-    private GunController theGunController;
+    [SerializeField] private GunController theGunController;
 
 
     public void WalkingAnimation(bool _flag)

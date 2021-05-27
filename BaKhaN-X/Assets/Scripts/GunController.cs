@@ -8,14 +8,12 @@ public class GunController : MonoBehaviour
     public static bool isActivate = false; // activate
 
 
-    [SerializeField]
-    private Gun currentGun; // equipped gun
+    [SerializeField] private Gun currentGun; // equipped gun
     private float currentFireRate; // fire rate 
 
     //state var
     private bool isReload = false;
-    [HideInInspector]
-    public bool isFineSightMode = false;
+    [HideInInspector] public bool isFineSightMode = false;
 
     private Vector3 originPos; // origin position
     private AudioSource audioSource; // sound effect
@@ -23,12 +21,10 @@ public class GunController : MonoBehaviour
     private RaycastHit hitInfo; // ray hit info
 
     //component
-    [SerializeField]
-    private Camera theCam;
+    [SerializeField] private Camera theCam;
     private Crosshair theCrosshair;
 
-    [SerializeField]
-    private GameObject hit_effect_prefab; // hit effect
+    [SerializeField] private GameObject hit_effect_prefab; // hit effect
 
     void Start()
     {
