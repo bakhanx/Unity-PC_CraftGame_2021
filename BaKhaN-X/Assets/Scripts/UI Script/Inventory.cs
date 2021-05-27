@@ -6,7 +6,6 @@ public class Inventory : MonoBehaviour
 {
     public static bool inventoryActivated = false;
 
-
     //component
     [SerializeField] private GameObject go_InventoryBase;
     [SerializeField] private GameObject go_SlotParent;

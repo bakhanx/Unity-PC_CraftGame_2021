@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class DragSlot : MonoBehaviour
 {
     static public DragSlot instance;
-
     public Slot dragSlot;
 
     //item image
