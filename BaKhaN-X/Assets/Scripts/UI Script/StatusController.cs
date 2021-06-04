@@ -61,9 +61,7 @@ public class StatusController : MonoBehaviour
     [SerializeField]
     private Image[] images_Gague;
 
-
     private const int HP = 0, DP = 1, SP = 2, HUNGRY = 3, THIRSTY = 4, SATISFY = 5;
-
 
     // Start is called before the first frame update
     void Start()
