@@ -78,6 +78,8 @@
 
 ## UI
 - Inventory
+  - restrict camera rotation
+  - hide mouse cursor
 - Slot
   - Drag Slot
 - Status Controller
@@ -87,3 +89,7 @@
   - Hungry
   - Thirsty
   - Satisfy
+
+## Sun
+- Day
+- Night
