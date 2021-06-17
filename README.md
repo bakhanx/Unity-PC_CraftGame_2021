@@ -93,3 +93,8 @@
 ## Sun
 - Day
 - Night
+
+## Menu Scene
+- Start
+- Load
+- Exit
