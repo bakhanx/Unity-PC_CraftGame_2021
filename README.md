@@ -94,7 +94,7 @@
 - Day
 - Night
 
-## Menu Scene
+## Title Scene
 - Start
 - Load
 - Exit
